@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/%7BMeal-Finder-in-react%7D/static/css/main.7a74acd2.css",
+    "main.js": "/%7BMeal-Finder-in-react%7D/static/js/main.69b08249.js",
+    "static/js/787.96b7215c.chunk.js": "/%7BMeal-Finder-in-react%7D/static/js/787.96b7215c.chunk.js",
+    "static/media/10.jpg": "/%7BMeal-Finder-in-react%7D/static/media/10.8925cc8a3a8e04203b1b.jpg",
+    "static/media/7.jpg": "/%7BMeal-Finder-in-react%7D/static/media/7.9294a86512a01a199649.jpg",
+    "static/media/SalmonAvocadoSalad.jpg": "/%7BMeal-Finder-in-react%7D/static/media/SalmonAvocadoSalad.6185fb37ba72047b3856.jpg",
+    "static/media/search4.jpg": "/%7BMeal-Finder-in-react%7D/static/media/search4.1ae6b83ac98bc09ed9ba.jpg",
+    "static/media/search2.jpg": "/%7BMeal-Finder-in-react%7D/static/media/search2.2f3a749256c64125ae01.jpg",
+    "static/media/search6.jpg": "/%7BMeal-Finder-in-react%7D/static/media/search6.eb606f4d926738d799ae.jpg",
+    "static/media/2.jpg": "/%7BMeal-Finder-in-react%7D/static/media/2.28cee5c90106d73692ac.jpg",
+    "static/media/9.jpg": "/%7BMeal-Finder-in-react%7D/static/media/9.bc1d8ec6b748ec4164c1.jpg",
+    "static/media/search5.jpg": "/%7BMeal-Finder-in-react%7D/static/media/search5.eba2e970e6ca4b730567.jpg",
+    "static/media/search8.jpg": "/%7BMeal-Finder-in-react%7D/static/media/search8.f8cd5d5d37e9d8fc68ac.jpg",
+    "static/media/8.jpg": "/%7BMeal-Finder-in-react%7D/static/media/8.2d2b14c6aa5f05303186.jpg",
+    "static/media/6.jpg": "/%7BMeal-Finder-in-react%7D/static/media/6.b98645b0fa54122ff66e.jpg",
+    "static/media/3.jpg": "/%7BMeal-Finder-in-react%7D/static/media/3.719358f8a6658072dc5b.jpg",
+    "static/media/search1.jpg": "/%7BMeal-Finder-in-react%7D/static/media/search1.e7e3339b1396eea4e93f.jpg",
+    "static/media/5.jpg": "/%7BMeal-Finder-in-react%7D/static/media/5.1dcd2445ba87c6f6e8a1.jpg",
+    "static/media/4.jpg": "/%7BMeal-Finder-in-react%7D/static/media/4.d2c5cfec515ad1a28d39.jpg",
+    "static/media/search7.jpg": "/%7BMeal-Finder-in-react%7D/static/media/search7.2e32007ad69ba571cb1f.jpg",
+    "static/media/search3.jpg": "/%7BMeal-Finder-in-react%7D/static/media/search3.8dd06126cc01fe8fe3d2.jpg",
+    "index.html": "/%7BMeal-Finder-in-react%7D/index.html",
+    "main.7a74acd2.css.map": "/%7BMeal-Finder-in-react%7D/static/css/main.7a74acd2.css.map",
+    "main.69b08249.js.map": "/%7BMeal-Finder-in-react%7D/static/js/main.69b08249.js.map",
+    "787.96b7215c.chunk.js.map": "/%7BMeal-Finder-in-react%7D/static/js/787.96b7215c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7a74acd2.css",
+    "static/js/main.69b08249.js"
+  ]
+}
