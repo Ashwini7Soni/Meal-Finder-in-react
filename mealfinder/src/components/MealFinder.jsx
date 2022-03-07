@@ -11,6 +11,7 @@ function MealFinder() {
   const [shuffleMode, setShuffleMode] = useState(0);
   const [text, setText] = useState("");
   const [randomIndex, setRandomIndex] = useState(-1);
+  const [selectedFoodName, setSelectedFoodName] = useState("");
   
   return (
       <MealFinderContext.Provider
@@ -22,7 +23,9 @@ function MealFinder() {
         text: text,
         setText: setText,
         randomIndex: randomIndex,
-        setRandomIndex: setRandomIndex
+        setRandomIndex: setRandomIndex,
+        selectedFoodName: selectedFoodName,
+        setSelectedFoodName: setSelectedFoodName
       }}
       >
         <div className="mealfinder" style={{backgroundColor: "#54201c", color: "white"}}>

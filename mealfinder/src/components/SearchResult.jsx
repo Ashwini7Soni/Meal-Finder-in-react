@@ -13,7 +13,8 @@ import search8 from "../images/search8.jpg";
 
 
 function SearchResult() {
-  const [selectedFoodName, setSelectedFoodName] = useState("");
+  //const [selectedFoodName, setSelectedFoodName] = useState("");
+
   const imageSources = [
         {
             source: search1,
@@ -115,60 +116,63 @@ function SearchResult() {
   const contextValues = useContext(MealFinderContext);
   
   return (
-      <>
-        <h1>Search results for '{contextValues.text}':</h1>
-        <div style={{display: "flex", flexWrap: "wrap", justifyContent: "space-evenly", margin: "10px"}}>
-            {
-                //<img src={imageSources[0].source} style = {{width: "25%"}}/>
-                imageSources.filter((imageObj) => {
-                    return imageObj.name.toLowerCase().includes(contextValues.text.toLowerCase().trim());
-                }).map((filteredObj) => {
-                    return (
-                        <div className="wrapper" onClick = {() => {
-                            console.log("image clicked");
-                            setSelectedFoodName(filteredObj.name.toLowerCase());
-                        }}>
-                            <div className="food-wrapper">
-                                <div className="food-name">{filteredObj.name}</div>
-                            </div>
-                            <div className="image-wrapper">
-                                <img 
-                                src={filteredObj.source} width= "300px" height="300px"
-                                alt = {imageSources.name}/>
-                            </div>
-                        </div>
-                        )
-                    
-                })
-            }
-        </div>
+      <div>
+        {!contextValues.text? "" : 
         <div>
-            {imageSources.filter((obj) => {
-                return obj.name.toLowerCase() === selectedFoodName;
-            }).map((selected) => {
-                 return <div>
-                    <h1>{selected.recipeObj.name}</h1>
-                    <div><img src = {selected.recipeObj.imageSource} style = {{width: "300px", border: "5px solid white"}}/></div>
-                    <div style={{display: "flex", flexDirection: "column", textAlign: "center"}}>
-                        <div style={{fontSize: "20px", border: "2px dashed white", borderRadius: "5px", marginTop: "25px", width: "50%", alignSelf: "center"}}>
-                            <p>{selected.recipeObj.category}</p>
-                            <p>{selected.recipeObj.country}</p>
+            <h1>Search results for '{contextValues.text}':</h1>
+            <div style={{display: "flex", flexWrap: "wrap", justifyContent: "space-evenly", margin: "10px"}}>
+                {
+                    //<img src={imageSources[0].source} style = {{width: "25%"}}/>
+                    imageSources.filter((imageObj) => {
+                        return imageObj.name.toLowerCase().includes(contextValues.text.toLowerCase().trim());
+                    }).map((filteredObj) => {
+                        return (
+                            <div className="wrapper" onClick = {() => {
+                                console.log("image clicked");
+                                contextValues.setSelectedFoodName(filteredObj.name.toLowerCase());
+                            }}>
+                                <div className="food-wrapper">
+                                    <div className="food-name">{filteredObj.name}</div>
+                                </div>
+                                <div className="image-wrapper">
+                                    <img 
+                                    src={filteredObj.source} width= "300px" height="300px"
+                                    alt = {imageSources.name}/>
+                                </div>
+                            </div>
+                            )
+                        
+                    })
+                }
+            </div>
+            <div>
+                {imageSources.filter((obj) => {
+                    return obj.name.toLowerCase() === contextValues.selectedFoodName;
+                }).map((selected) => {
+                    return <div>
+                        <h1>{selected.recipeObj.name}</h1>
+                        <div><img src = {selected.recipeObj.imageSource} style = {{width: "300px", border: "5px solid white"}}/></div>
+                        <div style={{display: "flex", flexDirection: "column", textAlign: "center"}}>
+                            <div style={{fontSize: "20px", border: "2px dashed white", borderRadius: "5px", marginTop: "25px", width: "50%", alignSelf: "center"}}>
+                                <p>{selected.recipeObj.category}</p>
+                                <p>{selected.recipeObj.country}</p>
+                            </div>
+                            <p style={{fontSize: "18px", width: "50%", alignSelf: "center", padding: "3px"}}>{selected.recipeObj.recipe}</p>
+                            <h2>Ingredients</h2>
+                            <ul style={{listStyleType: "none", display: "flex", flexWrap: "wrap", width: "50%", alignSelf: "center", justifyContent: "center"}}>
+                                {
+                                selected.recipeObj.ingredients.map((ingredient) => {
+                                    return <li style={{marginRight: "0.8rem", border: "1px solid white", borderRadius: "5px", marginBottom: "0.5rem", color: "#54201c", backgroundColor: "white", fontWeight: "bold", padding: "3px"}}>{ingredient}</li>
+                                })
+                                }
+                            </ul>
                         </div>
-                        <p style={{fontSize: "18px", width: "50%", alignSelf: "center", padding: "3px"}}>{selected.recipeObj.recipe}</p>
-                        <h2>Ingredients</h2>
-                        <ul style={{listStyleType: "none", display: "flex", flexWrap: "wrap", width: "50%", alignSelf: "center", justifyContent: "center"}}>
-                            {
-                            selected.recipeObj.ingredients.map((ingredient) => {
-                                return <li style={{marginRight: "0.8rem", border: "1px solid white", borderRadius: "5px", marginBottom: "0.5rem", color: "#54201c", backgroundColor: "white", fontWeight: "bold", padding: "3px"}}>{ingredient}</li>
-                            })
-                            }
-                        </ul>
                     </div>
-                </div>
-            })}
-            
-        </div>
-      </>
+                })}
+                
+            </div>
+        </div>}
+      </div>
   );
 }
 

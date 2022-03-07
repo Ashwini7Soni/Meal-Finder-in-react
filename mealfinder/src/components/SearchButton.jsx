@@ -2,12 +2,15 @@ import { useContext } from "react";
 import MealFinderContext from "../contexts/MealFinderContext";
 import { BsSearch } from "react-icons/bs";
 
-function SearchButton({text}) {
+function SearchButton({userInput}) {
   const MealFinderContextValues = useContext(MealFinderContext);
   return (
     <button
     onClick={() => {
-        if(text === "") {
+        MealFinderContextValues.setSelectedFoodName("");
+        console.log(userInput);
+        MealFinderContextValues.setText(userInput);
+        if(userInput === "") {
             alert("Please enter a search term");
         }
         else {
@@ -15,7 +18,7 @@ function SearchButton({text}) {
             MealFinderContextValues.setShuffleMode(0);
         }
     }}
-    style = {{height: "1.8rem"}}
+    style = {{height: "1.9rem", boxSizing: "border-box"}}
     ><BsSearch /></button>
   );
 }
